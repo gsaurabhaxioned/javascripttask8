@@ -149,10 +149,6 @@ input:focus {
   outline: none;
 }
 
-/* .input-focus {
-  top: 0;
-} */
-
 .user-input {
   width: 90%;
   margin: 20px 0;
@@ -177,7 +173,13 @@ label span {
 .movespan {
   animation: moveup 0.2s;
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.5,0.7,0.2,0);
+  animation-timing-function: cubic-bezier(0,0.7,0.3,1);
+}
+
+.movedown {
+  animation: movedown 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0,0.7,0.3,1);
 }
 
 
@@ -200,6 +202,28 @@ label span {
 
   100% {
     transform: translateY(-16px);
+  }
+}
+
+@keyframes movedown {
+  0% {
+    transform: translateY(-16px);
+  }
+
+  25%{
+    transform: translateY(-7px);
+  }
+
+  50%{
+    transform: translateY(-5px);
+  }
+
+  75% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
 
