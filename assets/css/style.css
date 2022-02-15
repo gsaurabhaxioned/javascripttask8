@@ -1,0 +1,301 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html { overflow-y: scroll; }
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 86%; 
+  margin: 0 auto;
+}
+
+/*=================================
+  main styling starts here
+=================================*/
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4682B4;
+}
+
+.login-page {
+  padding: 41px;
+  flex-basis: 25%;
+  border-radius: 6px;
+  background-color: #2A4E6C;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 23px;
+  color: #fff;
+  font-size: 34px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  border: none;
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+}
+
+input[type="email"],input[type="password"] {
+  padding: 15px;
+  border-bottom: 2px solid #fff;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* .input-focus {
+  top: 0;
+} */
+
+.user-input {
+  width: 90%;
+  margin: 20px 0;
+  position: relative;
+  box-sizing: border-box; 
+}
+
+label {
+  position: absolute;
+  top: 15px;
+  display: block;
+  cursor: pointer;
+}
+
+label span {
+  float: left;
+  color: #fff;
+  font-size: 18px;
+  transition: 4s ;
+}
+
+.movespan {
+  animation: moveup 0.4s linear;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0,0.7,0.2,1);
+}
+
+
+@keyframes moveup {
+  0% {
+    transform: translateY(0);
+  }
+
+  25%{
+    transform: translateY(-2px);
+  }
+
+  50%{
+    transform: translateY(-5px);
+  }
+
+  75% {
+    transform: translateY(-7px);
+  }
+
+  100% {
+    transform: translateY(-16px);
+  }
+}
+
+
+.email label span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.email label span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.email label span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.email label span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.password label span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.password label span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.password label span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.password label span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.password label span:nth-child(6) {
+  animation-delay: 0.10s;
+}
+
+.password label span:nth-child(7) {
+  animation-delay: 0.12s;
+}
+
+.password label span:nth-child(8) {
+  animation-delay: 0.14s;
+}
+
+
+.login input[type="submit"] {
+  padding: 17px 0;
+  margin-top: 40px;
+  border-radius: 6px;
+  background-color: #ADD8E6;
+  color: #000;
+  font-size: 15px;
+}
+
+.register {
+  margin-top: 33px;
+  color: #fff;
+}
+
+.register a {
+  color: #ADD8E6;
+}
+
+.errormessage {
+  background-color: #ffff00;
+  color: #ff0000;
+}
+
+
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/ 
+
+
+
+
+
+
+
+ /*=================================
+  footer styling ends here
+=================================*/ 
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+
+
+}  
