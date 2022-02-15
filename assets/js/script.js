@@ -16,18 +16,19 @@ email.addEventListener('keypress', function () {
 });
 
 
-for (let i = 0; i < input_box.length; i++) {
-    input_box[i].addEventListener('focus', function () {
-        for (let j = 0; j < label.length; j++) {
-            label[j].classList.add('movespan');
-        }
+input_box.forEach(i=> {
+    i.addEventListener('focus', function () {
+        label.forEach(j=> {
+            j.classList.add('movespan');
+            j.classList.remove('movedown');
+        });
     });
 
 
-    input_box[i].addEventListener('blur', function () {
-        for (let j = 0; j < label.length; j++) {
-            label[j].classList.remove('movespan');
-            label[j].classList.add('movespandown');
-        }
+    i.addEventListener('blur', function () {
+        label.forEach(j=> {
+            j.classList.remove('movespan');
+            j.classList.toggle('movedown');
+        });
     });
-}
+});
