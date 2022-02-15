@@ -171,13 +171,13 @@ label span {
 }
 
 .movespan {
-  animation: moveup 0.2s;
+  animation: moveup 0.3s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0,0.7,0.3,1);
 }
 
 .movedown {
-  animation: movedown 0.2s;
+  animation: movedown 0.4s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0,0.7,0.3,1);
 }
