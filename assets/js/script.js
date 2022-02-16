@@ -31,4 +31,9 @@ input_box.forEach(i=> {
             j.classList.toggle('movedown');
         });
     });
+
+    i.addEventListener('oninput', function(){
+      i.removeEventListener('focus');
+      i.removeEventListener('blur');
+    });
 });
