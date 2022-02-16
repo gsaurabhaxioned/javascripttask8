@@ -171,13 +171,13 @@ label span {
 }
 
 .movespan {
-  animation: moveup 0.3s;
+  animation: moveup 0.2s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0,0.7,0.3,1);
 }
 
 .movedown {
-  animation: movedown 0.4s;
+  animation: movedown 0.2s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0,0.7,0.3,1);
 }
@@ -197,7 +197,7 @@ label span {
   }
 
   75% {
-    transform: translateY(-18px);
+    transform: translateY(-22px);
   }
 
   100% {
@@ -219,7 +219,7 @@ label span {
   }
 
   75% {
-    transform: translateY(3px);
+    transform: translateY(6px);
   }
 
   100% {
