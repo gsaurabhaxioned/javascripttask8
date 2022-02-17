@@ -1,10 +1,10 @@
 let email_field = document.querySelector('input[name="email"]'),
     email = document.querySelector('#email'),
-    label = document.querySelectorAll('.input-label'),
-    input_box = document.querySelectorAll('.input-box');
 error_msg = document.querySelectorAll('.error'),
     error = document.querySelector('#error'),
-    email_pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    email_pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/,
+    label = document.querySelectorAll('.input-label'),
+    input_box = document.querySelectorAll('.input-box');
 
 email.addEventListener('keypress', function () {
     let email_value = email_field.value;
@@ -32,8 +32,9 @@ input_box.forEach(i=> {
         });
     });
 
-    i.addEventListener('oninput', function(){
-      i.removeEventListener('focus');
-      i.removeEventListener('blur');
-    });
+    // i.addEventListener('onload', function(){
+    //     label.forEach(j=> {
+    //         j.classList.add('movedown');
+    //     });
+    // });
 });
