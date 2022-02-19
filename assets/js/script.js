@@ -24,17 +24,14 @@ input_box.forEach(i=> {
         });
     });
 
-
+    
     i.addEventListener('blur', function () {
+        if(i.value === ""){
         label.forEach(j=> {
             j.classList.remove('movespan');
             j.classList.toggle('movedown');
         });
+    }
     });
 
-    // i.addEventListener('onload', function(){
-    //     label.forEach(j=> {
-    //         j.classList.add('movedown');
-    //     });
-    // });
 });
